@@ -1,0 +1,3 @@
+[submodule "knowledge-tree-builder"]
+	path = knowledge-tree-builder
+	url = https://github.com/codetea-fly/knowledge-tree-builder.git
