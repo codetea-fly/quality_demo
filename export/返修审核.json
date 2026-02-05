@@ -1,0 +1,45 @@
+{
+  "id": "1770172566642-qz1axwxrg",
+  "name": "返修审核",
+  "description": "",
+  "enabled": true,
+  "createdAt": "2026-02-04T02:36:06.642Z",
+  "updatedAt": "2026-02-04T02:46:28.481Z",
+  "steps": [
+    {
+      "id": "1770172599828-oj3f4xqun",
+      "name": "返修单合规性审核",
+      "description": "结合组织程序文件要求判断签字是否齐备",
+      "stepType": "file_parse",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770172624103-dxxm6hsic",
+      "name": "返修单内容审核",
+      "description": "是否关联返修工艺",
+      "stepType": "file_parse",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770172773105-x1mqqzce1",
+      "name": "返修工艺编制审核",
+      "description": "返修工艺编制是否合理、审签完备",
+      "stepType": "file_parse",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770173176567-p04qeudk3",
+      "name": "返修检验记录审核",
+      "description": "",
+      "stepType": "sub_workflow",
+      "required": true,
+      "subWorkflowConfig": {
+        "workflowId": "1770172947112-yitg2xomv",
+        "workflowName": "返修检验记录审核"
+      }
+    }
+  ]
+}

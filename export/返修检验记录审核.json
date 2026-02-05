@@ -1,0 +1,42 @@
+{
+  "id": "1770172947112-yitg2xomv",
+  "name": "返修检验记录审核",
+  "description": "审核返修的过程和检验记录是否满足返修工艺的技术要求，所有量化的记录是否都量化；\n返修检验人员是否具有检验资质；\n返修检验日期是否在返修工艺批准日期之后；\n返修单关联的超差/让步申请是否批准。",
+  "enabled": true,
+  "createdAt": "2026-02-04T02:42:27.112Z",
+  "updatedAt": "2026-02-04T02:45:42.937Z",
+  "steps": [
+    {
+      "id": "1770173019632-tm55dboxe",
+      "name": "返修工艺要求审核",
+      "description": "检验记录满足返修工艺要求，量化记录都满足",
+      "stepType": "file_parse",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770173077714-i6xp9ooa8",
+      "name": "检验人员资质审核",
+      "description": "返修检验人员是否具有检验资质",
+      "stepType": "script_check",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770173099190-2uxlbdreb",
+      "name": "检验日期合规审核",
+      "description": "返修检验日期是否在返修工艺批准日期之后",
+      "stepType": "script_check",
+      "required": true,
+      "checkConfig": {}
+    },
+    {
+      "id": "1770173129467-yrn7uatd3",
+      "name": "关联超差/让步申请审核",
+      "description": "返修单关联的超差/让步申请是否批准",
+      "stepType": "file_parse",
+      "required": true,
+      "checkConfig": {}
+    }
+  ]
+}
